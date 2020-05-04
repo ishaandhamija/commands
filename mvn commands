@@ -1,0 +1,12 @@
+Create mvn project
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app
+
+Mvn build
+mvn clean install
+
+Mvn run
+java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
+
+To give access to run sh file:-
+chmod u+x bin/def.sh

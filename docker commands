@@ -1,0 +1,38 @@
+CREATE A DOCKER CONTAINER AND RUN IT IN FOREGROUND
+docker container run -it -p 80:80 nginx
+
+CREATE A DOCKER CONTAINER AND RUN IT IN BACKGROUND
+docker container run -d -p 80:80 --name myngnix nginx
+
+LIST ALL CONTAINERS
+docker container ls -a
+
+DELETE DOCKER CONTAINER
+docker container rm <First 3 letters of CONTAINER ID>
+
+DELETE RUNNING DOCKER CONTAINER
+docker container rm <First 3 letters of CONTAINER ID> -f
+
+LIST DOCKER IMAGES
+docker images
+
+DELETE DOCKER IMAGE
+docker image rm <First 3 letters of IMAGE ID>
+
+STOP DOCKER CONTAINER
+docker container stop mysql
+
+ENTER TO DOCKER CONTAINER
+docker container exec -it myngnix bash
+
+MOUND DOCKER CONTAINER TO LOCAL FOLDER IN LAPTOP
+docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name ngnix-website nginx
+
+DOCKER IMAGE BUILD
+docker image build -t ishaandhamija/ngnix-website .
+
+RUN DOCKER IMAGE
+docker container run -it -p 8000:8000 ishaandhamija/master_test_app
+
+PUSH UR DOCKER IMAGE TO DOCKER HUB
+docker push ishaandhamija/nginx-website
